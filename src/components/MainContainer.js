@@ -8,7 +8,6 @@ class MainContainer extends Component {
     return (
       <div id="main-container">
         <TopNavbar />
-        {this.props.children}
       </div>
   );
 }
