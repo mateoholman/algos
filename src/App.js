@@ -13,7 +13,7 @@ class App extends Component {
       <BrowserRouter>
         <div>
           <TopNavbar />
-          <Route path='/' component={Home} />
+          <Route exact path='/' component={Home} />
           <Route path='/binary' component={BinarySearch} />
         </div>
       </BrowserRouter>

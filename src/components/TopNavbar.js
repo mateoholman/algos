@@ -17,14 +17,13 @@ const TopNavbar = () => {
     <Navbar inverse collapseOnSelect>
       <Navbar.Header>
         <Navbar.Brand>
-          <a href="#">Algos</a>
+          <NavLink to='/'>Algos</NavLink>
         </Navbar.Brand>
         <Navbar.Toggle />
       </Navbar.Header>
       <Navbar.Collapse>
         <Nav pullRight>
-          <li><NavLink to={{pathname: '/binary'}}>Binary</NavLink></li>
-          <NavItem eventKey={2} href="#">Link Right</NavItem>
+          <li><NavLink to='/binary'>Binary</NavLink></li>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
