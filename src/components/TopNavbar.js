@@ -23,7 +23,8 @@ const TopNavbar = () => {
       </Navbar.Header>
       <Navbar.Collapse>
         <Nav pullRight>
-          <li><NavLink to='/binary'>Binary</NavLink></li>
+          <li><NavLink to='/binary'>Binary Search</NavLink></li>
+          <li><NavLink to='/selection'>Selection Sort</NavLink></li>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
