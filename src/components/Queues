@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 
-class Trees extends Component {
+class Queues extends Component {
   render() {
     return (
       <div>
-        <h1>Trees</h1>
-        <p>Trees...</p>
+        <h1>Queues</h1>
+        <p>Queues...</p>
       </div>
     );
   }
 }
 
-export default Trees;
+export default Queues;
