@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import LinkedListObj from './LinkedListObj';
 import { Col, Form, Button, FormGroup, ControlLabel, FormControl } from 'react-bootstrap';
 
 class LinkedList extends Component {
@@ -8,24 +9,8 @@ class LinkedList extends Component {
     this.state = {
         listName: '',
         numNodes: 0,
-        currentLL: [],
+        currentLL: false,
     };
-  }
-
-  //Our LinkedList constructor
-  LinkedList() {
-    this.head = null;
-    this.tail = null;
-    this.sayHi = function () {
-      console.log('Hi!');
-    }
-  }
-
-  //Our Node constructor
-  Node(value, next, prev) {
-    this.value = value;
-    this.next = next;
-    this.prev = prev;
   }
 
   handleNameChange(e) {
@@ -40,16 +25,18 @@ class LinkedList extends Component {
     e.preventDefault();
     console.log(this.state.listName);
     console.log(this.state.numNodes);
-    const ll = new LinkedList();
-    console.log(ll);
-    ll.head = 1;
-    console.log(ll.head);
+    this.setState({ currentLL: true});
   }
 
   renderLinkedList() {
     //console.log(this.state.currentLL.length);
-    if (this.state.currentLL.length > 0) {
-      return(<h2>There is a Linked List!</h2>);
+    if (this.state.currentLL) {
+      return(
+        <div>
+        <h2>There is a Linked List!</h2>
+        <LinkedListObj listName={this.state.listName} numNodes={this.state.numNodes} />
+        </div>
+      );
     }
     else {
       return(<h2>No Current Linked Lists</h2>);

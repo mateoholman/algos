@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 
 class LinkedListObj extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
-        listName: '',
-        numNodes: 0,
-        currentLL: [],
+        listName: this.props.listName,
+        numNodes: this.props.numNodes
     };
   }
 
@@ -27,22 +26,14 @@ class LinkedListObj extends Component {
     this.prev = prev;
   }
 
-  handleSubmit(e){
-    e.preventDefault();
-    console.log(this.state.listName);
-    console.log(this.state.numNodes);
-    const ll = new LinkedList();
-    console.log(ll);
-    ll.head = 1;
-    console.log(ll.head);
-  }
-
   render() {
     return (
       <div>
+        <p>List Name: {this.state.listName}</p>
+        <p>Number of Nodes in the list: {this.state.numNodes}</p>
       </div>
     );
   }
 }
 
-export default LinkedList;
+export default LinkedListObj;
