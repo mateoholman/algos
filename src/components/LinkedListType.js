@@ -16,6 +16,9 @@ class LinkedList extends Component {
   LinkedList() {
     this.head = null;
     this.tail = null;
+    this.sayHi = function () {
+      console.log('Hi!');
+    }
   }
 
   //Our Node constructor
@@ -39,6 +42,8 @@ class LinkedList extends Component {
     console.log(this.state.numNodes);
     const ll = new LinkedList();
     console.log(ll);
+    ll.head = 1;
+    console.log(ll.head);
   }
 
   renderLinkedList() {
