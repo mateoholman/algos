@@ -6,17 +6,10 @@ class LinkedListObj extends Component {
 
     this.state = {
         listName: this.props.listName,
+        listHead: null,
+        listTail: null,
         numNodes: this.props.numNodes
     };
-  }
-
-  //Our LinkedList constructor
-  LinkedList() {
-    this.head = null;
-    this.tail = null;
-    this.sayHi = function () {
-      console.log('Hi!');
-    }
   }
 
   //Our Node constructor

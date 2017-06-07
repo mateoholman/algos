@@ -11,21 +11,24 @@ function truncateString(str, num) {
   let dots = "...";
   //Determine where to truncate.
   //If the string length is <= 3, we take the num and add the ...
-  if (strAry.length <= 3){
+  if (num <= 3){
     for(i=0;i<num;i++){
       newStrAry[i] = strAry[i];
     }
     newStrAry[newStrAry.length] = dots;
   }
+  //If the string length is > 3, we truncate the string 3 spots prior to the location
   else {
-    console.log("In the else");
-    // let truncLoc = num - 4;
-    // for(i=truncLoc;i<num;i++){
-    //   strAry[i] = '.';
+    let truncLoc = num - 3;
+    for(i=truncLoc;i<num;i++){
+      strAry[i] = '.';
+    }
+    newStrAry = strAry.slice(0,num);
+    console.log(newStrAry.join(""));
   }
 
   //Return the truncated string
   return strAry.join("");
 }
 
-truncateString("A-", 1);
+truncateString("A-tisket a-tasket A green and yellow basket", 11);
