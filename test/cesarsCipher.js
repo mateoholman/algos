@@ -12,10 +12,17 @@ function rot13(str) {
     codedAry[i] = str.charCodeAt(i);
   }
   //Xform the array values to their unicode equivalent
+  console.log("O is: " + "O".charCodeAt(0));
+  console.log("P is: " + "P".charCodeAt(0));
+  console.log("R is: " + "R".charCodeAt(0));
+  console.log("Z is: " + "Z".charCodeAt(0));
 
   //Shift the characters by 13 places, but only if they are letters
   decodedAry = codedAry.map((e) => {
-    if(e > 58 && e < 85){
+    if(e >= 65 && e <= 90){
+      return e-13;
+    }
+    else if (e >= 97 && e <= 122){
       return e-13;
     }
       else {
