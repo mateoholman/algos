@@ -19,11 +19,12 @@ function rot13(str) {
 
   //Shift the characters by 13 places, but only if they are letters
   decodedAry = codedAry.map((e) => {
-    if(e >= 65 && e <= 90){
+    //78 to 90 to subtract 13. 65 is A.
+    if(e >= 78 && e <= 90){
       return e-13;
     }
-    else if (e >= 97 && e <= 122){
-      return e-13;
+    else if (e >= 65 && e <= 77){
+      return e+13;
     }
       else {
         return e;
